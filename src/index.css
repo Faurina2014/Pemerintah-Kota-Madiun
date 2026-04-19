@@ -1,0 +1,48 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+:root {
+  --color-primary: #1B7A3D;
+  --color-secondary: #6BA68A;
+  --color-accent: #F5A623;
+  --color-accent-light: #F5D08A;
+  --color-dark: #1a1a1a;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--color-dark);
+  background-color: #FAFAFA;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6, .font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+/* Sparkle animation for hero */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+.sparkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
